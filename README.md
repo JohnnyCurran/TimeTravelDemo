@@ -2,7 +2,7 @@
 
 ## Example
 
-The video below shows the Demo application (along with the extension) in action
+The video below shows the Demo application using [TimeTravel](https://github.com/JohnnyCurran/TimeTravel) and the [TimeTravel Extension](https://github.com/JohnnyCurran/LiveViewTimeTravelExtension) in action
 
 https://user-images.githubusercontent.com/18315178/206040925-139688e9-991c-4b17-9c7a-dafc3031cf9d.mov
 
