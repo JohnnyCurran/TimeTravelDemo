@@ -1,5 +1,11 @@
 # TimeTravelDemo
 
+## Example
+
+The video below shows the Demo application (along with the extension) in action
+
+https://user-images.githubusercontent.com/18315178/206040925-139688e9-991c-4b17-9c7a-dafc3031cf9d.mov
+
 **Be sure to have installed the [browser extension](https://github.com/JohnnyCurran/LiveViewTimeTravelExtension)**
 
 To start your Phoenix server:
