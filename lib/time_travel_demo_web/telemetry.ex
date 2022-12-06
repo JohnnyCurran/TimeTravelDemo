@@ -16,6 +16,18 @@ defmodule TimeTravelDemoWeb.Telemetry do
       # {Telemetry.Metrics.ConsoleReporter, metrics: metrics()}
     ]
 
+    :ok =
+      :telemetry.attach_many(
+        "live-view-handler",
+        [
+          [:phoenix, :live_view, :mount, :stop],
+          [:phoenix, :live_view, :handle_event, :stop],
+          [:phoenix, :live_view, :handle_params, :stop]
+        ],
+        &TimeTravel.TelemetryHandler.live_view_event_handler/4,
+        %{}
+      )
+
     Supervisor.init(children, strategy: :one_for_one)
   end
 
