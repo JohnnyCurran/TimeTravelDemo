@@ -7,6 +7,10 @@
 # General application configuration
 import Config
 
+config :time_travel,
+  endpoint: TimeTravelDemoWeb.Endpoint,
+  pubsub: TimeTravelDemo.PubSub
+
 # Configures the endpoint
 config :time_travel_demo, TimeTravelDemoWeb.Endpoint,
   url: [host: "localhost"],

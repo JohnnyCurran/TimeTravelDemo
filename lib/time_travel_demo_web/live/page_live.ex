@@ -13,6 +13,8 @@ defmodule TimeTravelDemoWeb.PageLive do
 
   @impl true
   def mount(_params, _session, socket) do
+    if connected?(socket) do
+      Phoenix.PubSub.subscribe(TimeTravelDemoWeb.PubSub
     {:ok, assign(socket, :items, [])}
   end
 
