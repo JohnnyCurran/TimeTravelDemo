@@ -48,4 +48,17 @@ defmodule TimeTravelDemoWeb.PageLive do
     %{items: items} = socket.assigns
     {:noreply, assign(socket, :items, Enum.drop(items, -1))}
   end
+
+  @impl true
+  def handle_info({:time_travel, _socket_id, nil}, socket) do
+    {:noreply, socket}
+  end
+
+  def handle_info({:time_travel, socket_id, assigns}, %{id: id} = socket) when id == socket_id do
+    {:noreply, assign(socket, assigns)}
+  end
+
+  def handle_info({:time_travel, _socket_id, _assigns}, params, socket) do
+    {:noreply, socket}
+  end
 end
