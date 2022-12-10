@@ -29,6 +29,8 @@ defmodule TimeTravelDemoWeb.PageLive do
       <span>List of random-ish items!</span>
       <button type="button" phx-click="add">Add an item</button>
       <button type="button" phx-click="remove">Remove last item</button>
+      <!-- This has no event handler (on purpose) so that the LiveView will crash -->
+      <button type="button" phx-click="crash">Crash</button>
       <ul>
         <%= for item <- @items do %>
           <li> <%= item %> </li>
