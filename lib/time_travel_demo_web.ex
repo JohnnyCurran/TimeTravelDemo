@@ -46,6 +46,9 @@ defmodule TimeTravelDemoWeb do
       use Phoenix.LiveView,
         layout: {TimeTravelDemoWeb.LayoutView, "live.html"}
 
+      # Import TimeTravel handle_info callbacks for each LiveView
+      use TimeTravel
+
       unquote(view_helpers())
     end
   end
