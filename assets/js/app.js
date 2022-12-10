@@ -24,8 +24,12 @@ import "phoenix_html"
 // Establish Phoenix Socket and LiveView configuration.
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
+// For development:
+import {TimeTravel} from "../../../time_travel"
 import topbar from "../vendor/topbar"
-// import {TimeTravel} from "time_travel"
+
+timeTravel = new TimeTravel();
+timeTravel.isEnabled();
 
 let socketId = document.querySelector('div[data-phx-main]').getAttribute("id");
 let timeTravelSocket = new Socket("/socket")
