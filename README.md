@@ -4,7 +4,7 @@
 
 The video below shows the Demo application using [TimeTravel](https://github.com/JohnnyCurran/TimeTravel) and the [TimeTravel Extension](https://github.com/JohnnyCurran/LiveViewTimeTravelExtension) in action
 
-https://user-images.githubusercontent.com/18315178/206040925-139688e9-991c-4b17-9c7a-dafc3031cf9d.mov
+https://user-images.githubusercontent.com/18315178/206929183-2ce45dca-665a-4a3e-bb36-d0862dc0d4c3.mov
 
 **Be sure to have installed the [browser extension](https://github.com/JohnnyCurran/LiveViewTimeTravelExtension)**
 
@@ -17,6 +17,5 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 - Open Developer Tools (Right click > Inspect)
 - Select the arrows for more options and select LiveView DevTools
-- Press "Clear Storage"
-- Refresh `localhost:4000`
+- Interact with the LiveView
 - Happy Time Traveling!
