@@ -24,10 +24,10 @@ import "phoenix_html"
 // Establish Phoenix Socket and LiveView configuration.
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
-// If in development, use path dep:
-import {TimeTravel} from "../../../time_travel"
-// For non-development, don't prefix with path:
-// import {TimeTravel} from "time_travel"
+// If doing local development on TimeTravel lib, use path dep:
+// import {TimeTravel} from "../../../time_travel"
+// Otherwise don't prefix with path:
+import {TimeTravel} from "time_travel"
 import topbar from "../vendor/topbar"
 
 let timeTravel = new TimeTravel(Socket);
