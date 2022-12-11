@@ -7,9 +7,7 @@
 # General application configuration
 import Config
 
-config :time_travel,
-  endpoint: TimeTravelDemoWeb.Endpoint,
-  pubsub: TimeTravelDemo.PubSub
+config :time_travel, endpoint: TimeTravelDemoWeb.Endpoint
 
 # Configures the endpoint
 config :time_travel_demo, TimeTravelDemoWeb.Endpoint,
