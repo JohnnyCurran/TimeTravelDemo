@@ -24,24 +24,13 @@ import "phoenix_html"
 // Establish Phoenix Socket and LiveView configuration.
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
+// If doing local development on TimeTravel lib, use path dep:
+// import {TimeTravel} from "../../../time_travel"
+// Otherwise don't prefix with path:
+import {TimeTravel} from "time_travel"
 import topbar from "../vendor/topbar"
 
-let socketId = document.querySelector('div[data-phx-main]').getAttribute("id");
-let timeTravelSocket = new Socket("/socket")
-timeTravelSocket.connect();
-let channel = timeTravelSocket.channel('lvdbg:' + socketId);
-channel.join()
-  .receive("ok", ({messages}) => console.log("catching up", messages) )
-  .receive("error", ({reason}) => console.log("failed join", reason) )
-  .receive("timeout", () => console.log("Networking issue. Still waiting..."))
-
-channel.on("lv_event", payload => {
-  window.dispatchEvent(new CustomEvent('SaveAssigns', {detail: payload}));
-});
-
-window.addEventListener('RestoreAssigns', e => {
-  channel.push("restore-assigns", {...e.detail, socketId: socketId});
-});
+let timeTravel = new TimeTravel(Socket);
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})

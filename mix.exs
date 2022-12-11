@@ -41,7 +41,7 @@ defmodule TimeTravelDemo.MixProject do
       {:esbuild, "~> 0.4", runtime: Mix.env() == :dev},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
-      {:time_travel, "~> 0.1.0", only: :dev},
+      {:time_travel, "~> 0.2", only: :dev},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"}
     ]
