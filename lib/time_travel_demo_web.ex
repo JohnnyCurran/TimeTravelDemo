@@ -47,7 +47,7 @@ defmodule TimeTravelDemoWeb do
         layout: {TimeTravelDemoWeb.LayoutView, "live.html"}
 
       # Import TimeTravel handle_cast callbacks for each LiveView
-      use TimeTravel
+      use TimeTravel, :live_view
 
       unquote(view_helpers())
     end
