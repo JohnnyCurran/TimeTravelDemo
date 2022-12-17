@@ -22,7 +22,9 @@ defmodule TimeTravelDemoWeb.Telemetry do
         [
           [:phoenix, :live_view, :mount, :stop],
           [:phoenix, :live_view, :handle_event, :stop],
-          [:phoenix, :live_view, :handle_params, :stop]
+          [:phoenix, :live_view, :handle_params, :stop],
+          [:phoenix, :live_component, :update, :stop],
+          [:phoenix, :live_component, :handle_event, :stop]
         ],
         &TimeTravel.TelemetryHandler.live_view_event_handler/4,
         %{}
