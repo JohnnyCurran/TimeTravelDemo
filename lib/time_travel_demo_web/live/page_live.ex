@@ -27,6 +27,8 @@ defmodule TimeTravelDemoWeb.PageLive do
       <!-- This has no event handler (on purpose) so that the LiveView will crash -->
       <button type="button" phx-click="crash">Crash</button>
       <.live_component module={Counter} id="counter"/>
+      <.live_component module={Counter} id="counter-two"/>
+      <.live_component module={Counter} id="counter-three"/>
       <ul>
         <%= for item <- @items do %>
           <li> <%= item %> </li>

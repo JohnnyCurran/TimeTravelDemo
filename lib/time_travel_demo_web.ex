@@ -32,6 +32,7 @@ defmodule TimeTravelDemoWeb do
         root: "lib/time_travel_demo_web/templates",
         namespace: TimeTravelDemoWeb
 
+      import Phoenix.Component
       # Import convenience functions from controllers
       import Phoenix.Controller,
         only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
@@ -57,6 +58,8 @@ defmodule TimeTravelDemoWeb do
     quote do
       use Phoenix.LiveComponent
 
+      use TimeTravel, :live_component
+
       unquote(view_helpers())
     end
   end
@@ -74,6 +77,7 @@ defmodule TimeTravelDemoWeb do
       use Phoenix.Router
 
       import Plug.Conn
+      import Phoenix.Component
       import Phoenix.Controller
       import Phoenix.LiveView.Router
     end
