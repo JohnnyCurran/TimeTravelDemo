@@ -36,13 +36,13 @@ defmodule TimeTravelDemo.MixProject do
       {:phoenix, "~> 1.6.10"},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      # {:phoenix_live_view, "~> 0.17.5"},
-      {:phoenix_live_view, path: "../phoenix_live_view"},
+      {:phoenix_live_view, "~> 0.18"},
+      # {:phoenix_live_view, path: "../phoenix_live_view"},
       {:floki, ">= 0.30.0", only: :test},
       {:esbuild, "~> 0.4", runtime: Mix.env() == :dev},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
-      {:time_travel, path: "../time_travel"},
+      {:time_travel, "~> 0.3"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"}
     ]
