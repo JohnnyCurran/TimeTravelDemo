@@ -25,9 +25,9 @@ import "phoenix_html"
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 // If doing local development on TimeTravel lib, use path dep:
-import {TimeTravel} from "../../../time_travel"
+// import {TimeTravel} from "../../../time_travel"
 // Otherwise don't prefix with path:
-// import {TimeTravel} from "time_travel"
+import {TimeTravel} from "time_travel"
 import topbar from "../vendor/topbar"
 
 let timeTravel = new TimeTravel(Socket);
