@@ -2,14 +2,8 @@ defmodule TimeTravelDemoWeb.Counter do
   use TimeTravelDemoWeb, :live_component
 
   @impl true
-  def update(assigns, socket) do
-    # ID is required in order for TimeTravel to find the component
-    socket =
-      socket
-      |> assign(:count, 0)
-      |> assign_new(:id, fn -> assigns.id end)
-
-    {:ok, assign(socket, count: 0)}
+  def mount(socket) do
+    {:ok, assign(socket, :count, 0)}
   end
 
   @impl true
