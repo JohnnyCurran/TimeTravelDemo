@@ -4,7 +4,7 @@
 
 The video below shows the Demo application using [TimeTravel](https://github.com/JohnnyCurran/TimeTravel) and the [TimeTravel Extension](https://github.com/JohnnyCurran/LiveViewTimeTravelExtension) in action
 
-https://user-images.githubusercontent.com/18315178/206929183-2ce45dca-665a-4a3e-bb36-d0862dc0d4c3.mov
+https://user-images.githubusercontent.com/18315178/209589137-0bf0bec3-ebdc-4983-aeb6-7f2e25825ef5.mov
 
 **Be sure to have installed the [browser extension](https://github.com/JohnnyCurran/LiveViewTimeTravelExtension)**
 
